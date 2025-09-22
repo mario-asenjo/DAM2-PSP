@@ -101,12 +101,15 @@ htop -t
     
 10. Lanza el comando `ping` contra `google.com` en segundo plano (&) y obtén su identificador de proceso (PID).
 ```bash
-
+# Lanzamos el ping en segundo plano escribimos el output en un fichero salida
+ping www.google.es >salida &
+# Ahora buscamos y filtramos tanto por comando como la columna del PID
+ps aux |grep ping| head -n1 | awk '{print "PID de Ping a google.es: " $2}'
 ```
     
 11. Finaliza el proceso de Firefox usando su PID.
 ```bash
-
+kill -9 ${ps aux | grep firefox | head -n1 | awk '{ print $2 }'
 ```
     
 12. Vuelve a lanzarlo y esta vez deténlo, luego reactívalo.
