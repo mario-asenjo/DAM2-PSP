@@ -1,0 +1,95 @@
+  946  2025-09-25 10:51:07history
+  947  2025-09-25 10:51:10clear
+  948  2025-09-25 10:51:21>export HISTSIZE=10000
+  949  2025-09-25 10:51:21export HISTFILESIZE=20000
+  950  2025-09-25 10:51:21export HISTTIMEFORMAT='%F %T'
+  951  2025-09-25 10:51:28history
+  952  2025-09-25 10:51:32echo 'export HISTSIZE=10000' >> ~/.bashrc
+  953  2025-09-25 10:51:32echo 'export HISTFILESIZE=20000' >> ~/.bashrc
+  954  2025-09-25 10:51:32echo "export HISTTIMEFORMAT='%F %T'" >> ~/.bashrc
+  955  2025-09-25 10:51:40uname -a
+  956  2025-09-25 10:51:42uname -r
+  957  2025-09-25 10:51:44df -h
+  958  2025-09-25 10:51:45du -sh
+  959  2025-09-25 10:51:49du -sh /etc
+  960  2025-09-25 10:51:52sudo du -sh /etc
+  961  2025-09-25 10:51:57free -h
+  962  2025-09-25 10:52:01ps au
+  963  2025-09-25 10:52:02ps aux
+  964  2025-09-25 10:52:04top
+  965  2025-09-25 10:52:08htop
+  966  2025-09-25 10:52:15ps -ax
+  967  2025-09-25 10:52:18ps -lax
+  968  2025-09-25 10:52:21ps -lax |grep bash
+  969  2025-09-25 10:52:23clear
+  970  2025-09-25 10:52:29pstree
+  971  2025-09-25 10:52:31htop -t
+  972  2025-09-25 10:53:00ping www.google.es > a &
+  973  2025-09-25 10:54:06ps aux | grep ping | head -n 1 |awk '{print $2}'
+  974  2025-09-25 10:54:20PID=$(ps aux | grep ping | head -n 1 |awk '{print $2}')
+  975  2025-09-25 10:54:26kill -9 $PID
+  976  2025-09-25 10:54:32firefox > x &
+  977  2025-09-25 10:54:32kill -9 $(ps aux | grep firefox | head -n1 | awk '{ print $2 })'
+  978  2025-09-25 10:54:42firefox > x &
+  979  2025-09-25 10:54:42PID=$(ps aux | grep firefox | head -n1 | awk '{ print $2 })
+kill -19 $PID
+kill -18 $PID
+  980  2025-09-25 10:55:27ls
+  981  2025-09-25 10:55:43cd UAX/2DAM/
+  982  2025-09-25 10:55:46mkdir PSP
+  983  2025-09-25 10:55:49cd PSP/
+  984  2025-09-25 10:56:01mkdir Unidad1
+  985  2025-09-25 10:56:05cd Unidad1/
+  986  2025-09-25 10:56:19git clone https://github.com/mario-asenjo/DAM2-PSP.git remoto
+  987  2025-09-25 10:56:24ls
+  988  2025-09-25 10:56:31mv -R remoto/ ../.
+  989  2025-09-25 10:56:34mv remoto/ ../.
+  990  2025-09-25 10:56:36ls
+  991  2025-09-25 10:56:37cd ..
+  992  2025-09-25 10:56:38ls
+  993  2025-09-25 10:56:39cd remoto/
+  994  2025-09-25 10:56:43cd ..
+  995  2025-09-25 10:56:50vim script.sh
+  996  2025-09-25 10:57:11chmod +x script.sh 
+  997  2025-09-25 10:57:13./script.sh 
+  998  2025-09-25 10:57:21ps aux
+  999  2025-09-25 10:57:40kill -9 977
+ 1000  2025-09-25 10:57:48clear
+ 1001  2025-09-25 10:57:51systemctl status ssh
+ 1002  2025-09-25 10:58:06apt install openssh-server
+ 1003  2025-09-25 10:58:11sudo apt install openssh-server
+ 1004  2025-09-25 10:58:23systemctl status ssh
+ 1005  2025-09-25 10:58:31systemctl start ssh
+ 1006  2025-09-25 10:58:34sudo systemctl start ssh
+ 1007  2025-09-25 10:58:43sudo systemctl disable ssh
+ 1008  2025-09-25 10:58:50sudo systemctl enable ssh
+ 1009  2025-09-25 10:58:55systemctl is-enabled ssh
+ 1010  2025-09-25 10:59:11sudo systemctl start ssh
+ 1011  2025-09-25 10:59:22ls -la ~
+ 1012  2025-09-25 10:59:33mkdir prueba
+ 1013  2025-09-25 10:59:43echo "hola" > prueba/hola.txt 
+ 1014  2025-09-25 10:59:53cp prueba/hola.txt prueba/new_hola.txt
+ 1015  2025-09-25 11:00:04mv prueba/new_hola.txt prueba/renamed.txt
+ 1016  2025-09-25 11:00:14rm -rf prueba/renamed.txt 
+ 1017  2025-09-25 11:00:23ls -l > listado.txt
+ 1018  2025-09-25 11:00:30echo "Fin del listado" >> listado.txt 
+ 1019  2025-09-25 11:00:41let a=3/0 2>/dev/null
+ 1020  2025-09-25 11:00:47ps aux | grep bash
+ 1021  2025-09-25 11:00:58cat listado.txt | head -n 5
+ 1022  2025-09-25 11:01:07ping -c 4 www.google.es
+ 1023  2025-09-25 11:01:13ifconfig
+ 1024  2025-09-25 11:01:19ss -tuln
+ 1025  2025-09-25 11:01:24netstat -tuln
+ 1026  2025-09-25 11:01:37sudo lsof -i -P -n | grep LISTEN
+ 1027  2025-09-25 11:01:44dig www.google.com
+ 1028  2025-09-25 11:01:49host www.google.com
+ 1029  2025-09-25 11:01:59ssh mario@172.29.224.1
+ 1030  2025-09-25 11:02:15scp ~/.ssh/.id_rsa mario@ubuntuPSP:/home/mario/.ssh/.
+ 1031  2025-09-25 11:02:19clear
+ 1032  2025-09-25 11:02:24sudo useradd alumno1
+ 1033  2025-09-25 11:02:29sudo passwd alumno1
+ 1034  2025-09-25 11:02:41chmod 775 archivo.txt
+ 1035  2025-09-25 11:02:48chown mario:mario archivo.txt
+ 1036  2025-09-25 11:02:54sudo userdel alumno1
+ 1037  2025-09-25 11:02:58clear
+ 1038  2025-09-25 11:03:08history | tail -n 30
