@@ -1,0 +1,17 @@
+ El volumen de la unidad C es OS
+ El n£mero de serie del volumen es: 60CE-D273
+
+ Directorio de C:\Users\mario\Documents\GitHub\Multiproceso01
+
+16/10/2025  12:12    <DIR>          .
+12/10/2025  19:43    <DIR>          ..
+09/10/2025  11:57               344 .gitignore
+16/10/2025  12:15    <DIR>          .idea
+16/10/2025  12:17                 0 errores_ls.txt
+09/10/2025  11:57               433 Multiproceso01.iml
+16/10/2025  12:12                 0 null
+16/10/2025  12:12    <DIR>          out
+16/10/2025  12:17                 0 salida_ls.txt
+16/10/2025  12:15    <DIR>          src
+               5 archivos            777 bytes
+               5 dirs  36.543.197.184 bytes libres
