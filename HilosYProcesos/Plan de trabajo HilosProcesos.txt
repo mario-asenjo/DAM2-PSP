@@ -1,0 +1,14 @@
+1) Padre -> Varios hijos -> Tarea grande
+	- LeerFichero
+			- Cada hijo escribe en 1 fichero diferente.
+
+2) Padre -> Varios hijos -> Tarea grande
+	- LeerFichero
+			- Cada hijo escribe en el mismo fichero.
+			- Zona Exclusión mutua.
+			- Semáforos.
+			- Monitores.
+			- Colas (FIFO) -> Cola de prioridad.
+			
+3) Hilos -> Thread -> Lo que es de los procesos padre, es del padre y de sus hijos en el momento de crear los hilos. Pero lo que es de un hilo, es solo del hilo.
+			-> Si un padre se compra una casa y tiene hijos, es suya y de sus hijos. Si un padre tiene hijos y después se compra una casa es solo suya. Si un hijo se compra una casa es solo suya.
