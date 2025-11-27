@@ -1,7 +1,9 @@
 public class Principal {
     public static void main(String[] args) {
-        MiHilo miHilo = new MiHilo();
+        MiHilo miHilo1 = new MiHilo(1, 3000, 10);
+        MiHilo miHilo2 = new MiHilo(2, 1000, 10);
 
-        miHilo.start();
+        miHilo1.start();
+        miHilo2.start();
     }
 }
