@@ -5,6 +5,7 @@ import java.io.File;
 public class ProcesoPadre {
     private final char[] VOCALES_LIST = { 'a', 'e', 'i', 'o', 'u'};
     private final String TEXTO;
+    private final List<>
 
     public ProcesoPadre(String texto_de_fichero) {
         this.TEXTO = texto_de_fichero;
