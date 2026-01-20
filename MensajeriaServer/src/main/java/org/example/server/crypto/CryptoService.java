@@ -1,4 +1,4 @@
-package org.example.server;
+package org.example.server.crypto;
 
 /**
  * Strategy pattern for encrypt data and decrypt data

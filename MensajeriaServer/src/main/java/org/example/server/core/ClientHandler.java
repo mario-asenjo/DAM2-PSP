@@ -1,6 +1,9 @@
-package org.example.server;
+package org.example.server.core;
 
 import com.google.gson.JsonObject;
+import org.example.server.network.FrameCodec;
+import org.example.server.protocol.ProtocolCodec;
+import org.example.server.app.ChatServer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

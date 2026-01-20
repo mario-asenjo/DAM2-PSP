@@ -1,4 +1,4 @@
-package org.example.server;
+package org.example.server.network;
 
 import java.io.IOException;
 import java.io.InputStream;

@@ -1,4 +1,4 @@
-package org.example.server;
+package org.example.server.crypto;
 
 import javax.crypto.Cipher;
 import javax.crypto.spec.GCMParameterSpec;

@@ -1,4 +1,4 @@
-package org.example.server;
+package org.example.server.protocol;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;

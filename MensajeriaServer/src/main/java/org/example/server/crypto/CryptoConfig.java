@@ -1,4 +1,4 @@
-package org.example.server;
+package org.example.server.crypto;
 
 import java.util.Base64;
 

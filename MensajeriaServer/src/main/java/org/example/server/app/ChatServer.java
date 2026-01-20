@@ -1,5 +1,6 @@
-package org.example.server;
+package org.example.server.app;
 
+import org.example.server.core.ClientHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -15,10 +16,10 @@ public class ChatServer {
     private static final Logger log = LoggerFactory.getLogger(ChatServer.class);
 
     /** Genera ID únicos de cliente de forma thread-safe */
-    private static final AtomicLong clientSeq = new AtomicLong(0);
+    public static final AtomicLong clientSeq = new AtomicLong(0);
 
     /** Genera ID únicos de mensaje de forma thread-safe */
-    static final AtomicLong msqSeq = new AtomicLong(0);
+    public static final AtomicLong msqSeq = new AtomicLong(0);
 
     public static void main(String[] args) throws IOException {
         int port = 5000;
