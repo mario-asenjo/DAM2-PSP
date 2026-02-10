@@ -22,6 +22,7 @@ public class ClientHandler implements Runnable {
     private final long clientId;
     private final Socket socket;
     private String username = null;
+    private String password = null;
 
     public ClientHandler(long clientId, Socket socket) {
         this.clientId = clientId;
@@ -106,6 +107,11 @@ public class ClientHandler implements Runnable {
         this.username = message.get("username").getAsString();
         log.info("Client #{} authenticated as '{}'", clientId, username);
 
+        if (!message.has("password")) {
+            sendAck(out, "AUTH", false, "Missing password!");
+            return ;
+        }
+
         ack = new JsonObject();
         ack.addProperty("type", "ACK");
         ack.addProperty("for", "AUTH");
@@ -145,7 +151,7 @@ public class ClientHandler implements Runnable {
         ack.addProperty("type", "ACK");
         ack.addProperty("for", "MSG");
         ack.addProperty("ok", true);
-        ack.addProperty("id", "srv-" + id);
+        ack.addProperty("id", "msg-" + id);
         FrameCodec.writeFrame(out, ProtocolCodec.encode(ack));
     }
 }

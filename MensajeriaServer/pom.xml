@@ -45,7 +45,7 @@
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>${mojo.version}</version>
                 <configuration>
-                    <mainClass>com.example.server.ChatServer</mainClass>
+                    <mainClass>org.example.server.app.ChatServer</mainClass>
                 </configuration>
             </plugin>
         </plugins>

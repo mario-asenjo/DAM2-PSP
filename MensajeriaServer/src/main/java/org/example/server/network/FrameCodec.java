@@ -9,7 +9,7 @@ import java.nio.ByteBuffer;
  * Frame: 4 bytes big-endian (int) con longitud + payload bytes.
  * Convierte TCP (stream) en "mensajes" definidos por nosotros.
  */
-public class FrameCodec {
+public final class FrameCodec {
     private FrameCodec() {}
 
     public static final int HEADER_LEN = 4;

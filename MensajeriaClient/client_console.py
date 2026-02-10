@@ -1,4 +1,5 @@
 import logging
+import random
 from socket import socket, create_connection, SHUT_RDWR
 from threading import Event, Thread
 import time
@@ -50,18 +51,20 @@ def main() -> None:
     thread.start()
 
     # Auth
-    auth: Dict[str, Any] = {"type": "AUTH", "username": username}
+    auth: Dict[str, Any] = {"type": "AUTH", "username": username, "password": "contraseña_mario"}
     send_frame(sock, encode(auth))
     log.info("SENT AUTH")
 
     # Enviar varios MSG Seguidos (Sin Sleep) para probar framing.
     now_ms: Callable[[], int] = lambda: int(time.time() * 1000)
 
+    lista_receivers: list[str] = ["bob", "carlos", "tauste", "juan", "abel"]
+
     for i in range(10):
         msg: Dict[str, Any] = {
             "type": "MSG",
             "from": username,
-            "to": "bob",
+            "to": random.choice(lista_receivers),
             "ts": now_ms(),
             "text": f"Hola bob!#{i}"
         }

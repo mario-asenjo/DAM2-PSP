@@ -6,7 +6,7 @@ import com.google.gson.JsonParser;
 
 import java.nio.charset.StandardCharsets;
 
-public class ProtocolCodec {
+public final class ProtocolCodec {
     private static final Gson gson = new Gson();
 
     private ProtocolCodec() {};
