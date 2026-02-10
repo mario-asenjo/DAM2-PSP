@@ -4,8 +4,8 @@ from socket import socket, create_connection, SHUT_RDWR
 from threading import Event, Thread
 import time
 from typing import Any, Dict, Callable
-from network.frame_codec import read_frame, send_frame
-from network.protocol_codec import encode, decode
+from app.network.frame_codec import read_frame, send_frame
+from app.network.protocol_codec import encode, decode
 
 # Logging configuration
 logging.basicConfig(

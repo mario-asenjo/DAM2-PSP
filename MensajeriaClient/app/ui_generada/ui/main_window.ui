@@ -1,0 +1,130 @@
+<ui version="4.0">
+<class>MainWindow</class>
+<widget class="QMainWindow" name="MainWindow">
+<property name="windowTitle">
+<string>PSP Chat Client</string>
+</property>
+<widget class="QWidget" name="centralwidget">
+<layout class="QVBoxLayout" name="verticalLayoutRoot">
+<item>
+<layout class="QHBoxLayout" name="layoutConnection">
+<item>
+<widget class="QLineEdit" name="leHost">
+<property name="placeholderText">
+<string>Host</string>
+</property>
+</widget>
+</item>
+<item>
+<widget class="QSpinBox" name="sbPort">
+<property name="minimum">
+<number>1</number>
+</property>
+<property name="maximum">
+<number>65535</number>
+</property>
+<property name="value">
+<number>5555</number>
+</property>
+</widget>
+</item>
+<item>
+<widget class="QLineEdit" name="leUser">
+<property name="placeholderText">
+<string>Usuario</string>
+</property>
+</widget>
+</item>
+<item>
+<widget class="QLineEdit" name="lePass">
+<property name="echoMode">
+<enum>QLineEdit::Password</enum>
+</property>
+<property name="placeholderText">
+<string>Contraseña</string>
+</property>
+</widget>
+</item>
+<item>
+<widget class="QPushButton" name="btnConnect">
+<property name="text">
+<string>Conectar</string>
+</property>
+</widget>
+</item>
+</layout>
+</item>
+<item>
+<layout class="QHBoxLayout" name="layoutMain">
+<item>
+<layout class="QVBoxLayout" name="layoutChat">
+<item>
+<widget class="QLabel" name="lblStatus">
+<property name="text">
+<string>Desconectado</string>
+</property>
+</widget>
+</item>
+<item>
+<widget class="QLabel" name="lblMode">
+<property name="text">
+<string>Público</string>
+</property>
+</widget>
+</item>
+<item>
+<widget class="QPlainTextEdit" name="teChat">
+<property name="readOnly">
+<bool>true</bool>
+</property>
+</widget>
+</item>
+<item>
+<layout class="QHBoxLayout" name="layoutInput">
+<item>
+<widget class="QLineEdit" name="leMessage">
+<property name="placeholderText">
+<string>Escribe un mensaje…</string>
+</property>
+</widget>
+</item>
+<item>
+<widget class="QPushButton" name="btnSend">
+<property name="text">
+<string>Enviar</string>
+</property>
+</widget>
+</item>
+<item>
+<widget class="QPushButton" name="btnPublic">
+<property name="text">
+<string>Volver a público</string>
+</property>
+</widget>
+</item>
+</layout>
+</item>
+</layout>
+</item>
+<item>
+<layout class="QVBoxLayout" name="layoutUsers">
+<item>
+<widget class="QLabel" name="lblUsersTitle">
+<property name="text">
+<string>Usuarios</string>
+</property>
+</widget>
+</item>
+<item>
+<widget class="QListWidget" name="lwUsers"/>
+</item>
+</layout>
+</item>
+</layout>
+</item>
+</layout>
+</widget>
+</widget>
+<resources/>
+<connections/>
+</ui>
